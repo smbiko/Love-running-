@@ -1,6 +1,5 @@
 /* Google fonts import */
-<style>@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
-</style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
@@ -19,7 +18,6 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-
 /* Header */
 header {
     background-color: #ffffff;
@@ -36,7 +34,6 @@ header {
 header a {
     text-decoration: none;
     color: inherit;
-
 }
 
 h1 {
@@ -52,8 +49,7 @@ h1 {
     list-style-type: none;
 }
 
-#menu>li {
-
+#menu > li {
     margin-bottom: 1em;
 }
 
@@ -66,26 +62,25 @@ nav {
     position: absolute;
     background-color: #ffffff;
     width: 100%;
-    left:0;
+    left: 0;
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
     top: 100%;
 }
 
-/* Nav Toggle */
+/* Nav toggle */
 #nav-toggle:checked~nav {
-    display:block;
+    display: block;
 }
 
 #nav-toggle {
-    display: block;
+    display: none;
 }
 
 .nav-toggle-label {
     font-size: 2rem;
 }
-
 
 /* Main content */
 main {
@@ -99,3 +94,25 @@ main {
 footer {
     background-color: orange;
 }
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+    #menu > li {
+        padding-left: 1rem;
+    } 
+    .nav-toggle-label {
+        display: none;
+    }
+    
